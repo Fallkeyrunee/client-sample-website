@@ -1,0 +1,38 @@
+.hero {
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:url('https://picsum.photos/1600/900') center/cover;
+  color:white;
+}
+
+.cards {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card {
+  padding:30px;
+  border-radius:12px;
+  background:#f4f4f4;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* animation */
+.fade-in {
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
