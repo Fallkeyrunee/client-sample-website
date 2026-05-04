@@ -1,0 +1,93 @@
+.hero {
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:url('https://picsum.photos/1600/900') center/cover;
+  color:white;
+}
+
+.cards {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card {
+  padding:30px;
+  border-radius:12px;
+  background:#f4f4f4;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* animation */
+.fade-in {
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.hero {
+  padding: 160px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+/* subtle fade */
+.hero {
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.image-section {
+  height: 80vh;
+  background: url('https://picsum.photos/1600/1000') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.image-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.image-content {
+  position: relative;
+  z-index: 1;
+}
+
+.image-content h2 {
+  font-size: 40px;
+}
